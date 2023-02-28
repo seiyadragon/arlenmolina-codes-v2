@@ -9,5 +9,12 @@
   },
   "devDependencies": {
     "nuxt": "^3.2.2"
+  },
+  "dependencies": {
+    "nuxt-calendly": "^0.1.14",
+    "nuxt-icon": "^0.3.2",
+    "nuxt-icons": "^3.1.0",
+    "sass": "^1.58.3",
+    "scss": "^0.2.4"
   }
 }
