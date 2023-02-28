@@ -11,6 +11,7 @@
     "nuxt": "^3.2.2"
   },
   "dependencies": {
+    "@types/node": "^18.14.2",
     "nuxt-calendly": "^0.1.14",
     "nuxt-icon": "^0.3.2",
     "nuxt-icons": "^3.1.0",

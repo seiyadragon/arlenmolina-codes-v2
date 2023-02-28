@@ -22,7 +22,6 @@
         </DelayedDisplay>
         <div ref="rootElement"/>
     </div>
-    
 </template>
 
 <script lang="ts">
@@ -38,6 +37,9 @@
                 rootElement,
                 calendlyOptions,
             }
+        },
+        mounted() {
+            
         },
     }
 </script>

@@ -5,13 +5,25 @@
             <div>
                 <slot />
             </div>
-            
         </PaddingX>
         <DelayedDisplay :delay="3750">
-            <Footer />
+            <div ref="footerRef">
+                <Footer />
+            </div>
         </DelayedDisplay>
     </main>
 </template>
+
+<script lang="ts">
+    export default {
+        mounted() {
+            setTimeout(() => {
+                let el = this.$refs.footerRef as Element
+                el.scrollIntoView({behavior: 'smooth'})
+            }, 4750);
+        },
+    }
+</script>
 
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css?family=Tilt Warp');
@@ -36,18 +48,21 @@
     }
 
     ::-webkit-scrollbar {
+        position: absolute;
         width: 3px;
     }
 
     ::-webkit-scrollbar-track {
-      background-color: transparent;
+        position: absolute;
+        background-color: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color:  #666;
+        position: absolute;
+        background-color:  #666;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-      background-color: #777;
+        background-color: #777;
     }
 </style>
