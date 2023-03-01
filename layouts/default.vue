@@ -7,23 +7,12 @@
             </div>
         </PaddingX>
         <DelayedDisplay :delay="3750">
-            <div ref="footerRef">
+            <div>
                 <Footer />
             </div>
         </DelayedDisplay>
     </main>
 </template>
-
-<script lang="ts">
-    export default {
-        mounted() {
-            setTimeout(() => {
-                let el = this.$refs.footerRef as Element
-                el.scrollIntoView({behavior: 'smooth'})
-            }, 4750);
-        },
-    }
-</script>
 
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css?family=Tilt Warp');
