@@ -37,6 +37,7 @@
     body {
         margin: 0;
         overflow-x: hidden;
+        background-color: white;
     }
 
     main {
