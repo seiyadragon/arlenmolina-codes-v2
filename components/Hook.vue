@@ -25,8 +25,6 @@
     .hook-wrapper {
         animation: fade-in 1000ms ease-in-out;
         border-radius: 12px;
-        padding-top: 8px;
-        padding-bottom: 8px;
 
         .title {
             font-family: 'Tilt Warp';

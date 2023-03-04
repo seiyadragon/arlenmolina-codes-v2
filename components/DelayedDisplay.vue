@@ -1,5 +1,5 @@
 <template>
-    <div v-if="shouldLoadContent" ref="mainRef">
+    <div v-if="shouldLoadContent">
         <slot />
     </div>
 </template>

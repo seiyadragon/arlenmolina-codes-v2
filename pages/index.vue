@@ -1,9 +1,24 @@
 <template>
     <div>
         <DelayedDisplay :delay="750">
+            <VerticalSpacer :height="vSpacerHeight" />
             <Hook />
         </DelayedDisplay>
         <DelayedDisplay :delay="1750">
+            <VerticalSpacer :height="vSpacerHeight" />
+            <h2 class="subtitle">Don't give yourself a headache!</h2>
+            <h3 class="sub-subtitle">{{ `
+                I know how painful making websites can be. They can be buggy, unresponsive, or just plain not work!
+                There can be a lot of different resources to leverage such as tools and technologies, web builders, code, etc...
+                Which can make it difficult for people to know where to even begin.
+                And especially if you're trying to code one without any previous experience, forget about it.
+                Web apps can take significantly more work and require more advanced tools, such as programming.
+                But do not worry! I will save you the time and the headache of having to make your own website.
+                Let's work together in order to build the website of your dreams!
+            ` }}</h3>
+        </DelayedDisplay>
+        <DelayedDisplay :delay="2750">
+            <VerticalSpacer :height="vSpacerHeight" />
             <section class="project-section-wrapper">
                 <h2 class="subtitle">Check out some of these sites!</h2>
                 <div class="project-section">
@@ -14,32 +29,21 @@
                 </div>
             </section>
         </DelayedDisplay>
-        <DelayedDisplay :delay="2750">
-            <div class="calendly-button-wrapper">
-                <h2 class="subtitle">Are you ready to take your website to the next level?</h2>
-                <CalendlyPopupButton v-bind="calendlyOptions" :root-element="rootElement" class="calendly-button"/>
-            </div>
+        <DelayedDisplay :delay="3750">
+            <VerticalSpacer :height="vSpacerHeight" />
+            <CalendlyButton :full-button="true"/>
         </DelayedDisplay>
-        <div ref="rootElement"/>
     </div>
 </template>
 
 <script lang="ts">
     export default {
         setup() {
-            const rootElement = ref()
-            const calendlyOptions = {
-                url: 'https://calendly.com/arlenmolina101/web-discussion',
-                text: 'Schedule a meeting!',
-            }
-            
+            let vSpacerHeight = 360
+
             return {
-                rootElement,
-                calendlyOptions,
+                vSpacerHeight,
             }
-        },
-        mounted() {
-            
         },
     }
 </script>
@@ -85,30 +89,5 @@
 
     .sub-subtitle {
         font-size: 20px;
-    }
-
-    .calendly-button-wrapper {
-        padding-top: 16px;
-        padding-bottom: 24px;
-        animation: fade-in 1000ms ease-in-out;
-
-        .calendly-button {
-            width: 100%;
-            height: 160px;
-            border-radius: 6px;
-            border: solid 1px black;
-            background-color: orange;
-            font-family: 'Tilt Warp';
-            font-size: 36px;
-            margin-top: 8px;
-            margin-bottom: 8px;
-            transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out, background-color 500ms ease-in-out;
-
-            &:hover, &:focus {
-                transform: translate(-5px, -5px);
-                box-shadow: 10px 10px black;
-                background-color: gold;
-            }
-        }
     }
 </style>

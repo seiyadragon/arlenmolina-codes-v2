@@ -7,12 +7,23 @@
             </div>
         </PaddingX>
         <DelayedDisplay :delay="3750">
-            <div>
-                <Footer />
-            </div>
+            <VerticalSpacer :height="vSpacerHeight" />
+            <Footer />
         </DelayedDisplay>
     </main>
 </template>
+
+<script lang="ts">
+    export default {
+        setup() {
+            let vSpacerHeight = 360
+
+            return {
+                vSpacerHeight,
+            }
+        },
+    }
+</script>
 
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css?family=Tilt Warp');
@@ -49,7 +60,7 @@
 
     ::-webkit-scrollbar-thumb {
         position: absolute;
-        background-color:  #666;
+        background-color:  #333;
     }
     
     ::-webkit-scrollbar-thumb:hover {

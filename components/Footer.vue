@@ -8,28 +8,7 @@
                 </section>
                 <section class="footer-section">
                     <h1>Links</h1>
-                    <div class="links">
-                        <a href="https://twitter.com/arlenmolina101">
-                            <Icon name="ion:logo-twitter" />
-                            twitter
-                        </a>
-                        <a href="https://www.instagram.com/arlenmolina101/">
-                            <Icon name="ion:logo-instagram" />
-                            instagram
-                        </a>
-                        <a href="https://www.linkedin.com/in/arlen-molina-423159183/">
-                            <Icon name="ion:logo-linkedin" />
-                            linkedin
-                        </a>
-                        <a href="https://github.com/seiyadragon">
-                            <Icon name="ion:logo-github" />
-                            github
-                        </a>
-                        <a href="https://codepen.io/seiyadragon">
-                            <Icon name="ion:logo-codepen" />
-                            codepen
-                        </a>
-                    </div>
+                    <Links :link-labels="true"/>
                 </section>
             </div>
         </PaddingX>
@@ -66,7 +45,7 @@
                     if (this.displayedAbout.length < this.fullAbout.length) {
                         setTimeout(() => {
                             this.displayAbout()
-                        }, 50)
+                        }, 10)
                     }
                 }
             },
@@ -100,43 +79,8 @@
                 border-top-left-radius: 6px;
             }
 
-            h1, .links {
+            h1 {
                 text-align: center;
-            }
-
-            .links {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    text-decoration: none;
-                    margin-top: 3px;
-                    margin-bottom: 3px;
-                    display: inline-block;
-                    position: relative;
-                    max-width: 20%;
-                    left: 40%;
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        width: 100%;
-                        transform: scaleX(0);
-                        height: 1px;
-                        bottom: 0;
-                        left: 0;
-                        background-color: black;
-                        transform-origin: bottom right;
-                        transition: transform 500ms ease-in-out;
-                        animation: fadeout 500ms ease-in-out;
-                    }
-
-                    &:hover::after {
-                        transform: scale(1);
-                        transform-origin: bottom left;
-                        animation: fadein 500ms ease-in-out;
-                    }
-                }
             }
 
             .footer-section {
