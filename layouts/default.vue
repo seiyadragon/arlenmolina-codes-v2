@@ -6,24 +6,8 @@
                 <slot />
             </div>
         </PaddingX>
-        <DelayedDisplay :delay="3750">
-            <VerticalSpacer :height="vSpacerHeight" />
-            <Footer />
-        </DelayedDisplay>
     </main>
 </template>
-
-<script lang="ts">
-    export default {
-        setup() {
-            let vSpacerHeight = 360
-
-            return {
-                vSpacerHeight,
-            }
-        },
-    }
-</script>
 
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css?family=Tilt Warp');

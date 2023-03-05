@@ -30,7 +30,7 @@
     .calendly-button-wrapper {
         padding-top: 16px;
         padding-bottom: 24px;
-        animation: fade-in 1000ms ease-in-out;
+        animation: fade-in 1000ms ease-in-out, slide-down 1000ms ease-in-out;
 
         .calendly-button {
             width: 100%;

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <DelayedDisplay :delay="750">
+        <DelayedDisplay :delay="500">
             <VerticalSpacer :height="vSpacerHeight" />
             <Hook />
-        </DelayedDisplay>
-        <DelayedDisplay :delay="1750">
             <VerticalSpacer :height="vSpacerHeight" />
+        </DelayedDisplay>
+        <LazyDelayedDisplay :delay="0" v-if="pageScrollY > 10" class="headache">
             <h2 class="subtitle">Don't give yourself a headache!</h2>
             <h3 class="sub-subtitle">{{ `
                 I know how painful making websites can be. They can be buggy, unresponsive, or just plain not work!
@@ -16,9 +16,9 @@
                 But do not worry! I will save you the time and the headache of having to make your own website.
                 Let's work together in order to build the website of your dreams!
             ` }}</h3>
-        </DelayedDisplay>
-        <DelayedDisplay :delay="2750">
             <VerticalSpacer :height="vSpacerHeight" />
+        </LazyDelayedDisplay>
+        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 500">
             <section class="project-section-wrapper">
                 <h2 class="subtitle">Check out some of these sites!</h2>
                 <div class="project-section">
@@ -28,11 +28,15 @@
                     </div>
                 </div>
             </section>
-        </DelayedDisplay>
-        <DelayedDisplay :delay="3750">
             <VerticalSpacer :height="vSpacerHeight" />
+        </LazyDelayedDisplay>
+        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 1300">
             <CalendlyButton :full-button="true"/>
-        </DelayedDisplay>
+            <VerticalSpacer :height="vSpacerHeight" />
+        </LazyDelayedDisplay>
+        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 1800">
+            <Footer />
+        </LazyDelayedDisplay>
     </div>
 </template>
 
@@ -40,9 +44,19 @@
     export default {
         setup() {
             let vSpacerHeight = 360
+            let pageScrollY = ref(0)
+
+            if(process.client) {
+                window.onscroll = () => {
+                    pageScrollY.value = document.documentElement.scrollTop
+
+                    console.log(pageScrollY.value)
+                }
+            }
 
             return {
                 vSpacerHeight,
+                pageScrollY,
             }
         },
     }
@@ -89,5 +103,9 @@
 
     .sub-subtitle {
         font-size: 20px;
+    }
+
+    .headache {
+        animation: fade-in 1000ms ease-in-out, slide-down 1000ms ease-in-out;
     }
 </style>

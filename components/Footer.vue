@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <PaddingX class="footer-padding">
+        <div class="footer-padding">
             <div class="footer-content">
                 <section class="footer-section">
                     <h1>About</h1>
@@ -11,7 +11,7 @@
                     <Links :link-labels="true"/>
                 </section>
             </div>
-        </PaddingX>
+        </div>
     </div>
 </template>
 

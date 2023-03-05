@@ -22,7 +22,7 @@
             </section>
         </PaddingX>
     </header>
-    <DelayedDisplay :delay="2750">
+    <DelayedDisplay :delay="1750">
         <PaddingX class="click-me">
             <Icon name="ion:arrow-up" class="click-me-icon" />
             <p class="click-me-text">Click here!</p>
@@ -169,6 +169,7 @@
                 height: 32px;
                 top: 16px;
                 margin-left: 54px;
+                display: flex;
             }
             .profile-menu-closing {
                 animation: fade-out 500ms ease-in-out, slide-left 500ms ease-in-out;

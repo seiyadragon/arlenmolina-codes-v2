@@ -75,7 +75,7 @@
     .links {
         display: flex;
         height: 100%;
-        font-size: 20px;
+        font-size: 14px;
         animation: fade-in 500ms ease-in-out, slide-right 500ms ease-in-out;
         column-gap: 4px;
 
@@ -86,7 +86,7 @@
             color: white;
             transition: transform 500ms ease-in-out;
 
-            &:hover {
+            &:hover, &:focus {
                 transform: scale(1.25, 1.25);
             }
         }

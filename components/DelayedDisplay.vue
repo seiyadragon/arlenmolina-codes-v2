@@ -1,7 +1,7 @@
 <template>
-    <div v-if="shouldLoadContent">
-        <slot />
-    </div>
+        <div>
+            <slot v-if="shouldLoadContent" />
+        </div>
 </template>
 
 <script lang="ts">
@@ -18,6 +18,6 @@
             setTimeout(() => {
                 this.shouldLoadContent = true
             }, this.delay)
-        },
+        }
     }
 </script>

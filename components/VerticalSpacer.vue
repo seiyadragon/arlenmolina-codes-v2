@@ -19,7 +19,7 @@
         }
         to {
             @media (max-width: 720px) {
-                height: v-bind('`${height !== undefined ? height / 2.5 : height}px`');
+                height: v-bind('`${height !== undefined ? height / 2.25 : height}px`');
             }
 
             @media (min-width: 720px) {
@@ -32,7 +32,7 @@
         }
     }
     .spacer {
-        height: v-bind('`${height !== undefined ? height / 2.5 : height}px`');
+        height: v-bind('`${height !== undefined ? height / 2.25 : height}px`');
         animation: grow 500ms ease-in-out;
         transition: height 500ms ease-in-out;
 
