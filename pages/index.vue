@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <DelayedDisplay :delay="500">
+        <DelayedDisplay :delay="500" ref="firstElementRef">
             <VerticalSpacer :height="vSpacerHeight" />
             <Hook />
             <VerticalSpacer :height="vSpacerHeight" :show-scroll-down="pageScrollY < 50"/>
@@ -58,6 +58,9 @@
                 vSpacerHeight,
                 pageScrollY,
             }
+        },
+        mounted() {
+            document.documentElement.scrollTop = (this.$refs.firstElementRef as HTMLDivElement).scrollTop
         },
     }
 </script>
