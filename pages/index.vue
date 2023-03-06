@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="page-container">
         <DelayedDisplay :delay="500">
             <VerticalSpacer :height="vSpacerHeight" />
             <Hook />
-            <VerticalSpacer :height="vSpacerHeight" />
+            <VerticalSpacer :height="vSpacerHeight" :show-scroll-down="pageScrollY < 50"/>
         </DelayedDisplay>
         <LazyDelayedDisplay :delay="0" v-if="pageScrollY > 10" class="headache">
             <h2 class="subtitle">Don't give yourself a headache!</h2>
@@ -30,11 +30,11 @@
             </section>
             <VerticalSpacer :height="vSpacerHeight" />
         </LazyDelayedDisplay>
-        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 1300">
+        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 1170">
             <CalendlyButton :full-button="true"/>
             <VerticalSpacer :height="vSpacerHeight" />
         </LazyDelayedDisplay>
-        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 1800">
+        <LazyDelayedDisplay :delay="0" v-if="pageScrollY >= 1670">
             <Footer />
         </LazyDelayedDisplay>
     </div>
@@ -107,5 +107,9 @@
 
     .headache {
         animation: fade-in 1000ms ease-in-out, slide-down 1000ms ease-in-out;
+    }
+
+    .page-container {
+        min-height: 101vh;
     }
 </style>

@@ -74,10 +74,11 @@
 
     .links {
         display: flex;
-        height: 100%;
-        font-size: 14px;
+        width: 80%;
+        font-size: 18px;
         animation: fade-in 500ms ease-in-out, slide-right 500ms ease-in-out;
         column-gap: 4px;
+        flex-wrap: wrap;
 
         a {
             margin-top: auto;

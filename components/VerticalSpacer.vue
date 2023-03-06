@@ -1,6 +1,9 @@
 <template>
     <div class="spacer">
         <div class="spacer-line"></div>
+        <DelayedDisplay :delay="1000" v-if="showScrollDown">
+            <h2 class="sub-subtitle instruction">Scroll Down</h2>
+        </DelayedDisplay>
     </div>
 </template>
 
@@ -8,9 +11,39 @@
     export default {
         props: {
             height: Number,
+            showScrollDown: Boolean,
         }
     }
 </script>
+
+<style lang="scss">
+    @keyframes bounce {
+      25% {
+        transform: scale(calc(var(--s,1) + 0.2));
+      }
+      50% {
+        transform: scale(calc(var(--s,1) - 0.1));
+      }
+      75% {
+        transform: scale(calc(var(--s,1) + 0.1));
+      }
+      100% {
+        transform: scale(var(--s,1));
+      }
+    }
+
+    @keyframes pulse {
+        0% {
+            color: black;
+        }
+        50% {
+            color: orange;
+        }   
+        100% {
+            color: black;
+        }
+    }
+</style>
 
 <style lang="scss" scoped>
     @keyframes grow {
@@ -61,6 +94,7 @@
                 content: "";
                 display: block;
                 transform: translate(0, 100%);
+                border: none;
             }
 
             &::after {
@@ -73,6 +107,12 @@
                 display: block;
                 transform: translate(0, 200%);
             }
+        }
+
+        .instruction {
+            text-align: center;
+            margin-top: 128px;
+            animation: bounce 500ms linear, pulse 3000ms infinite ease-in-out;
         }
     }
 </style>

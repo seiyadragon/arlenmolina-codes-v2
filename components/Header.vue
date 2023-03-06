@@ -174,6 +174,11 @@
             .profile-menu-closing {
                 animation: fade-out 500ms ease-in-out, slide-left 500ms ease-in-out;
             }
+
+            .links {
+                display: flex;
+                align-content: center;
+            }
         }
     }
 
