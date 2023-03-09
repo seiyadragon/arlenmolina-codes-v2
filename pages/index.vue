@@ -60,10 +60,24 @@
             }
         },
         mounted() {
-            if (this.$route.query.scroll !== undefined) {
-                document.documentElement.scrollTop = parseInt((this.$route.query.scroll !== null ? this.$route.query.scroll : "0").toString())
-            } else {
-                document.documentElement.scrollTop = (this.$refs.firstElementRef as HTMLDivElement).scrollTop
+            if (process.client) {
+                let scroll = this.$route.query.scroll
+                
+                if (scroll !== undefined && scroll !== null)
+                    var scrollNumber = parseInt(scroll.toString())
+
+                function slowScroll(obj: any) {
+                    setTimeout(() => {
+                        if (document.documentElement.scrollTop < scrollNumber) {
+                            document.documentElement.scrollTop++
+                            slowScroll(obj)
+                        }
+                    }, 1)
+                }
+
+                if (scroll) {
+                    slowScroll(this)
+                }
             }
         },
     }
