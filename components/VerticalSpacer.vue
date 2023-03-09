@@ -12,7 +12,7 @@
         props: {
             height: Number,
             showScrollDown: Boolean,
-        }
+        },
     }
 </script>
 
@@ -52,7 +52,7 @@
         }
         to {
             @media (max-width: 720px) {
-                height: v-bind('`${height !== undefined ? height / 2.25 : height}px`');
+                height: v-bind('`${height !== undefined ? height / 2.4 : height}px`');
             }
 
             @media (min-width: 720px) {
@@ -65,7 +65,7 @@
         }
     }
     .spacer {
-        height: v-bind('`${height !== undefined ? height / 2.25 : height}px`');
+        height: v-bind('`${height !== undefined ? height / 2.4 : height}px`');
         animation: grow 500ms ease-in-out;
         transition: height 500ms ease-in-out;
 
@@ -111,8 +111,12 @@
 
         .instruction {
             text-align: center;
-            margin-top: 128px;
             animation: bounce 500ms linear, pulse 3000ms infinite ease-in-out;
+            margin-top: 48px;
+
+            @media (min-width: 720px) {
+                margin-top: 128px;
+            }
         }
     }
 </style>

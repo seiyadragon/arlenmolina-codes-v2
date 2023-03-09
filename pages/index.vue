@@ -3,7 +3,7 @@
         <DelayedDisplay :delay="500" ref="firstElementRef">
             <VerticalSpacer :height="vSpacerHeight" />
             <Hook />
-            <VerticalSpacer :height="vSpacerHeight" :show-scroll-down="pageScrollY < 50"/>
+            <VerticalSpacer :height="vSpacerHeight" :show-scroll-down="pageScrollY < 55"/>
         </DelayedDisplay>
         <LazyDelayedDisplay :delay="0" v-if="pageScrollY > 10" class="headache">
             <h2 class="subtitle">Don't give yourself a headache!</h2>
