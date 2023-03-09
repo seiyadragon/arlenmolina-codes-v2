@@ -60,7 +60,11 @@
             }
         },
         mounted() {
-            document.documentElement.scrollTop = (this.$refs.firstElementRef as HTMLDivElement).scrollTop
+            if (this.$route.query.scroll !== null && this.$route.query.scroll !== undefined) {
+                document.documentElement.scrollTop = parseInt(this.$route.query.scroll.toString())
+            } else {
+                document.documentElement.scrollTop = (this.$refs.firstElementRef as HTMLDivElement).scrollTop
+            }
         },
     }
 </script>
