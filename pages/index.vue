@@ -60,8 +60,8 @@
             }
         },
         mounted() {
-            if (this.$route.query.scroll !== null && this.$route.query.scroll !== undefined) {
-                document.documentElement.scrollTop = parseInt(this.$route.query.scroll.toString())
+            if (this.$route.query.scroll !== undefined) {
+                document.documentElement.scrollTop = parseInt((this.$route.query.scroll !== null ? this.$route.query.scroll : "0").toString())
             } else {
                 document.documentElement.scrollTop = (this.$refs.firstElementRef as HTMLDivElement).scrollTop
             }
