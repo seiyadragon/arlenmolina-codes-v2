@@ -2,6 +2,7 @@
 export default {
     modules: ['nuxt-icon', 'nuxt-calendly'],
     buildModules: ['@nuxt/typescript-build'],
+    plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
     app: {
         head: {
             charset: 'utf-16',
