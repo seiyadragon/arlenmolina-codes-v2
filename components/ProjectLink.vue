@@ -23,7 +23,7 @@
     .project-link-wrapper {
         width: 100%;
         transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out;
-        border: solid 1px black;
+        border: solid 1px white;
         border-radius: 6px;
 
         .image {
