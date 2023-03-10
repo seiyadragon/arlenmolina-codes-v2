@@ -25,17 +25,6 @@
     .hook-wrapper {
         animation: fade-in 1000ms ease-in-out;
         border-radius: 12px;
-
-        .title {
-            font-family: 'Tilt Warp';
-            font-size: 56px;
-            color: orange;
-            text-shadow: 3px 3px black;
-        }
-
-        .sub-subtitle {
-            font-size: 20px;
-        }
     }
 
 </style>

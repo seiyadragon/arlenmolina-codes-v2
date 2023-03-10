@@ -184,7 +184,8 @@
 
     .click-me {
         position: absolute;
-        animation: fade-in 1000ms ease-in-out;
+        animation: fade-in 1000ms ease-in-out, bounce 1000ms ease-in-out;
+        color: white;
 
         .click-me-icon {
             margin-left: 15px;

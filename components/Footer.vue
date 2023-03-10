@@ -71,9 +71,9 @@
             .footer-content {
                 display: flex;
                 justify-content: space-between;
-                border-top: 1px solid black;
-                border-left: 1px solid black;
-                border-right: 1px solid black;
+                border-top: 1px solid white;
+                border-left: 1px solid white;
+                border-right: 1px solid white;
                 padding: 8px;
                 border-top-right-radius: 6px;
                 border-top-left-radius: 6px;

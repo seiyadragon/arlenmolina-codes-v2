@@ -58,7 +58,7 @@
                 height: 1px;
                 bottom: 0;
                 left: 0;
-                background-color: black;
+                background-color: white;
                 transform-origin: bottom right;
                 transition: transform 500ms ease-in-out;
                 animation: fadeout 500ms ease-in-out;

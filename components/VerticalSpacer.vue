@@ -34,13 +34,30 @@
 
     @keyframes pulse {
         0% {
-            color: black;
+            color: white;
         }
         50% {
-            color: orange;
+            color: purple;
         }   
         100% {
-            color: black;
+            color: white;
+        }
+    }
+
+    @keyframes move-up {
+        from {
+            transform: translate(0, 0);
+        }
+        to {
+            transform: translate(0, 100%);
+        }
+    }
+    @keyframes move-up-2 {
+        from {
+            transform: translate(0, 0);
+        }
+        to {
+            transform: translate(0, 200%);
         }
     }
 </style>
@@ -78,34 +95,39 @@
         }
         
         .spacer-line {
-            width: 3px;
+            width: 6px;
             height: 50%;
-            background-color: black;
+            background-color: white;
             margin-left: auto;
             margin-right: auto;
             transform: translate(0, 50%);
+            border-radius: 100%;
 
             &::before {
-                width: 3px;
+                width: 6px;
                 height: 20%;
-                background-color: white;
+                background-color: #ff663a;
                 margin-left: auto;
                 margin-right: auto;
                 content: "";
                 display: block;
-                transform: translate(0, 100%);
                 border: none;
+                transition: transform 500ms ease-in-out;
+                transform: translate(0, 100%);
+                animation: move-up 1500ms ease-in-out;
             }
 
             &::after {
-                width: 3px;
+                width: 6px;
                 height: 20%;
-                background-color: white;
+                background-color: #ff663a;
                 margin-left: auto;
                 margin-right: auto;
                 content: "";
                 display: block;
+                transition: transform 500ms ease-in-out;
                 transform: translate(0, 200%);
+                animation: move-up-2 1500ms ease-in-out;
             }
         }
 

@@ -36,18 +36,16 @@
             width: 100%;
             height: 160px;
             border-radius: 6px;
-            border: solid 1px black;
-            background-color: orange;
+            border: solid 1px white;
+            background-color: #ff663a;
             font-family: 'Tilt Warp';
             font-size: 46px;
             margin-top: 8px;
             margin-bottom: 8px;
-            transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out, background-color 500ms ease-in-out;
+            transition: background-color 500ms ease-in-out;
 
             &:hover, &:focus {
-                transform: translate(-5px, -5px);
-                box-shadow: 10px 10px black;
-                background-color: gold;
+                background-color: red;
             }
         }
     }
@@ -61,8 +59,8 @@
             width: 100%;
             height: 34px;
             border-radius: 6px;
-            border: solid 1px black;
-            background-color: orange;
+            border: solid 1px white;
+            background-color: black;
             font-family: 'Tilt Warp';
             font-size: 14px;
             transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out, background-color 500ms ease-in-out;
@@ -71,9 +69,7 @@
             animation: fade-in 1000ms ease-in-out;
 
             &:hover, &:focus {
-                transform: translate(-2.5px, -2.5px);
-                box-shadow: 5px 5px rgb(180, 117, 0);
-                background-color: gold;
+                background-color: red;
             }
         }
     }

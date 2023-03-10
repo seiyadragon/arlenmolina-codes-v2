@@ -16,12 +16,13 @@
     * {
         margin: 0;
         font-family: 'Ubuntu';
+        color: white;
     }
 
     body {
         margin: 0;
         overflow-x: hidden;
-        background-color: white;
+        background-color: #ff663a;
     }
 
     main {

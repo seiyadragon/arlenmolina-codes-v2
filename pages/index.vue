@@ -111,19 +111,18 @@
     .title {
         font-family: 'Tilt Warp';
         font-size: 56px;
-        color: orange;
-        text-shadow: 3px 3px black;
+        color: white;
     }
 
     .subtitle {
         font-family: 'Tilt Warp';
         font-size: 36px;
-        color: orange;
-        text-shadow: 3px 3px black;
+        color: white;
     }
 
     .sub-subtitle {
         font-size: 20px;
+        color: white;
     }
 
     .headache {
