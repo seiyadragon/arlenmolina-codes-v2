@@ -4,7 +4,7 @@
             <section class="header-section">
                 <div :class="isProfileMenuActive ? 'header-profile-open' : 'header-profile'">
                     <img 
-                        src="https://pbs.twimg.com/profile_images/1619633162962837504/ysIVwrUR_400x400.jpg" 
+                        src="https://pbs.twimg.com/profile_images/1634406473974292482/XA1i30VH_400x400.jpg" 
                         alt="Profile Picture" class="profile-picture" 
                         @click="onProfileClick"
                     >
