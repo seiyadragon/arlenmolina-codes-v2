@@ -26,6 +26,9 @@
                         <ProjectLink link="https://artelligenceapp.vercel.app" image="/artelligence.png"/>
                         <ProjectLink link="https://better-self.vercel.app" image="/better-self.png"/>
                     </div>
+                    <div class="project-container">
+                        <ProjectLink link="https://scrollhub-v2.vercel.app" image="/scrollhub.png"/>
+                    </div>
                 </div>
             </section>
             <VerticalSpacer :height="vSpacerHeight" />
