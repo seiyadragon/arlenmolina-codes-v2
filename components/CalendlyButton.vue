@@ -1,6 +1,6 @@
 <template>
     <div :class="fullButton ? 'calendly-button-wrapper' : 'small-calendly-button-wrapper'">
-        <h2 v-if="fullButton" class="subtitle">Are you ready to take your website to the next level?</h2>
+        <h2 v-if="fullButton" class="subtitle">{{ buttonHook }}</h2>
         <CalendlyPopupButton v-if="calendlyRoot !== undefined" v-bind="calendlyOptions" :root-element="calendlyRoot" class="calendly-button"/>
         <div ref="calendlyRoot"></div>
     </div>
@@ -14,15 +14,22 @@
                 url: 'https://calendly.com/arlenmolina101/web-discussion',
                 text: 'Schedule a call!',
             }
+
+            let buttonHook = ref("")
             
             return {
                 calendlyRoot,
                 calendlyOptions,
+                buttonHook,
             }
         },
         props: {
-            fullButton: Boolean
-        }
+            fullButton: Boolean,
+            fullButtonText: String,
+        },
+        mounted() {
+            this.buttonHook = this.fullButtonText !== undefined ? this.fullButtonText : "Are you ready to take your website to the next level?"
+        },
     }
 </script>
 

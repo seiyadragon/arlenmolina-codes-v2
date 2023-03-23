@@ -1,12 +1,15 @@
 <template>
     <div class="hook-wrapper">
-        <h1 class="title">Websites don't have to be difficult!</h1>
-        <h3 class="sub-subtitle">
-            Tired of dealing with templates and plugins?
-            Don't make it hard on yourself.
-            I will turn your ideas into a reality with the power of programming and no-code solutions.
-            Get in contact with me today to see if a web developer is the best fit for your business!
-        </h3>
+        <h1 class="title">Your website can be easy</h1>
+        <h3 class="sub-subtitle">{{ `
+            I understand the hours it's taken you to hone your skills
+        ` }}</h3>
+        <h3 class="sub-subtitle">{{ `
+            However, many businesses still suffer from poorly designed websites
+        ` }}</h3>
+        <h3 class="sub-subtitle">{{ `
+            Don't let it be a liability, turn it into an asset!
+        ` }}</h3>
     </div>
 </template>
 

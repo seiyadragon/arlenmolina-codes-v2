@@ -23,6 +23,7 @@
         margin: 0;
         overflow-x: hidden;
         background-color: #ff663a;
+        scroll-behavior: smooth;
     }
 
     main {
@@ -36,6 +37,7 @@
     ::-webkit-scrollbar {
         position: absolute;
         width: 3px;
+        display: none;
     }
 
     ::-webkit-scrollbar-track {
